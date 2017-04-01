@@ -4,9 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>pers.zlf.archetypes</groupId>
-    <artifactId>archetype-quickstart</artifactId>
-    <version>1.0.1</version>
-    <packaging>jar</packaging>
+    <artifactId>archetype-parent</artifactId>
+    <version>1.0.0</version>
+    <modules>
+        <module>archetype-quickstart</module>
+    </modules>
+    <packaging>pom</packaging>
 
-    <name>archetype-quickstart</name>
+    <name>archetype-parent</name>
 </project>
