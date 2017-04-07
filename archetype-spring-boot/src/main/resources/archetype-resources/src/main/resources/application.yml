@@ -5,3 +5,9 @@ spring:
         name: ${artifactId}
 server:
     port: 8080
+
+---
+spring:
+    profiles: logging
+logback:
+    log-home: /tmp/logs/${artifactId}
