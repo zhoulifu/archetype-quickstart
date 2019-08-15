@@ -9,8 +9,8 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>archetype-spring-boot</artifactId>
+    <artifactId>spring-boot-quickstart</artifactId>
     <packaging>jar</packaging>
 
-    <name>archetype-spring-boot</name>
+    <name>spring-boot-quickstart</name>
 </project>

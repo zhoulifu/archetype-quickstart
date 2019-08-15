@@ -8,7 +8,7 @@
     <version>1.0.0</version>
     <modules>
         <module>archetype-quickstart</module>
-        <module>archetype-spring-boot</module>
+        <module>spring-boot-quickstart</module>
     </modules>
     <packaging>pom</packaging>
 
