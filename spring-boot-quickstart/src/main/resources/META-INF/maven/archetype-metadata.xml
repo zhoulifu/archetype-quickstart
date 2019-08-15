@@ -25,8 +25,4 @@
             </includes>
         </fileSet>
     </fileSets>
-
-    <requiredProperties>
-        <requiredProperty key="packaging" />
-    </requiredProperties>
 </archetype-descriptor>
