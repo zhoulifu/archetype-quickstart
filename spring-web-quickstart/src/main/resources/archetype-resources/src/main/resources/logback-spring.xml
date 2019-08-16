@@ -1,37 +1,37 @@
 <configuration>
-    <property name="CHARSET" value="UTF-8"/>
-    <property name="PATTERN"
-              value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{30} - %msg%n"/>
+  <property name="CHARSET" value="UTF-8"/>
+  <property name="PATTERN"
+            value="%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{30} - %msg%n"/>
 
-    <springProfile name="!logging">
-        <!--Append to console-->
-        <appender name="APPENDER" class="ch.qos.logback.core.ConsoleAppender">
-            <encoder>
-                <charset>${CHARSET}</charset>
-                <pattern>${PATTERN}</pattern>
-            </encoder>
-        </appender>
-    </springProfile>
+  <springProfile name="!logging">
+    <!--Append to console-->
+    <appender name="APPENDER" class="ch.qos.logback.core.ConsoleAppender">
+      <encoder>
+        <charset>${CHARSET}</charset>
+        <pattern>${PATTERN}</pattern>
+      </encoder>
+    </appender>
+  </springProfile>
 
-    <springProfile name="logging">
-        <!--Append to daily-rolling file stored in LOG_HOME-->
-        <springProperty name="LOG_HOME" source="logback.log-home"
-                        defaultValue="/tmp/logs/${artifactId}"/>
-        <appender name="APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
-            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <fileNamePattern>${LOG_HOME}/%d{yyyy-MM-dd}.log</fileNamePattern>
-            </rollingPolicy>
-            <encoder>
-                <charset>${CHARSET}</charset>
-                <pattern>${PATTERN}</pattern>
-            </encoder>
-        </appender>
-    </springProfile>
+  <springProfile name="logging">
+    <!--Append to daily-rolling file stored in LOG_HOME-->
+    <springProperty name="LOG_HOME" source="logback.log-home"
+                    defaultValue="/tmp/logs/${artifactId}"/>
+    <appender name="APPENDER" class="ch.qos.logback.core.rolling.RollingFileAppender">
+      <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+        <fileNamePattern>${LOG_HOME}/%d{yyyy-MM-dd}.log</fileNamePattern>
+      </rollingPolicy>
+      <encoder>
+        <charset>${CHARSET}</charset>
+        <pattern>${PATTERN}</pattern>
+      </encoder>
+    </appender>
+  </springProfile>
 
-    <root level="ERROR">
-        <appender-ref ref="APPENDER"/>
-    </root>
+  <root level="ERROR">
+    <appender-ref ref="APPENDER"/>
+  </root>
 
-    <logger name="org.springframework.web" level="INFO"/>
-    <logger name="${package}" level="DEBUG"/>
+  <logger name="org.springframework.web" level="INFO"/>
+  <logger name="${package}" level="DEBUG"/>
 </configuration>

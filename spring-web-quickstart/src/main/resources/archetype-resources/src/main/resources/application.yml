@@ -1,20 +1,20 @@
 spring:
-    profiles:
-        active:
-    application:
-        name: ${artifactId}
-    datasource:
-        driver-class-name: com.mysql.jdbc.Driver
-        url: jdbc:mysql:///test
-        username: root
-        password:
+  profiles:
+    active:
+  application:
+    name: ${artifactId}
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///test
+    username: root
+    password:
 server:
-    port: 8080
+  port: 8080
 mybatis:
-    mapper-locations: ['classpath:mapper/**/*.xml']
+  mapper-locations: ['classpath:mapper/**/*.xml']
 
 ---
 spring:
-    profiles: logging
+  profiles: logging
 logback:
-    log-home: /tmp/logs/${artifactId}
+  log-home: /tmp/logs/${artifactId}
