@@ -9,10 +9,10 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>spring-boot-quickstart</artifactId>
+    <artifactId>spring-web-quickstart</artifactId>
     <packaging>jar</packaging>
 
-    <name>spring-boot-quickstart</name>
+    <name>spring-web-quickstart</name>
 
     <build>
         <plugins>
