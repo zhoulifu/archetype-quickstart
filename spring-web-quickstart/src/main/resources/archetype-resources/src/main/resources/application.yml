@@ -1,6 +1,4 @@
 spring:
-  profiles:
-    active:
   application:
     name: ${artifactId}
   datasource:
@@ -8,6 +6,8 @@ spring:
     url: jdbc:mysql:///test
     username: root
     password:
+  jackson:
+    default-property-inclusion: NON_NULL
 server:
   port: 8080
 mybatis:
