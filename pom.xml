@@ -6,6 +6,7 @@
   <groupId>pers.zlf.archetypes</groupId>
   <artifactId>archetype-parent</artifactId>
   <version>1.0.0</version>
+
   <modules>
     <module>archetype-quickstart</module>
     <module>spring-web-quickstart</module>
@@ -13,4 +14,22 @@
   <packaging>pom</packaging>
 
   <name>archetype-parent</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <configuration>
+            <includeEmptyDirs>true</includeEmptyDirs>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
 </project>
